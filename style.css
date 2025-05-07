@@ -1,0 +1,153 @@
+@import url('normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+	touch-action: manipulation;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #ba5370; /* for old browsers jtk lol */
+	background: -webkit-linear-gradient(
+		to right,
+		#ba5370,
+		#f4e2d8
+	); /* prefix to know too */
+	background: linear-gradient(to right, #ba5370, #f4e2d8);
+	width: 100%;
+	height: 100vh;
+}
+
+.calculator {
+	max-width: 350px;
+	height: auto;
+	background: black;
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+	border-radius: 20px;
+	padding: 10px;
+	padding-inline: 0;
+	user-select: none;
+}
+
+.display {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	color: white;
+	font-size: 50px;
+	text-align: end;
+	word-wrap: break-word;
+	height: auto;
+	margin-right: 25px;
+	touch-action: manipulation;
+}
+
+.buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.button {
+	border: none;
+	color: white;
+	border-radius: 50px;
+	padding: 15px 18px;
+	width: 20%;
+	margin: 8px 5px;
+	font-size: 22px;
+	background-color: rgba(128, 128, 128, 0.372);
+	font-family: 'Roboto', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	transition: 0.2s all ease;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.zero-btn {
+	padding: 15px 131px 15px 15px;
+}
+
+.btn-orange {
+	background-color: orange;
+}
+
+.btn-gray {
+	background-color: grey;
+}
+
+button:hover {
+	opacity: 0.94;
+}
+
+@media screen and (max-width: 425px) {
+	body {
+		background: #000;
+	}
+	.calculator {
+		width: 100%;
+		max-width: 100%;
+		border-radius: 0;
+		margin: 0;
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+	}
+	.display {
+		font-size: 60px;
+		margin: 20px 10px;
+		text-align: right;
+	}
+	.buttons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 0 5px;
+		margin-top: 20px;
+	}
+	.button {
+		width: 22%;
+		font-size: 24px;
+		margin: 7px 5px;
+		padding: 20px 0;
+	}
+	.zero-btn {
+		width: 47%;
+		text-align: left;
+		padding-left: 20px;
+	}
+	.display {
+		font-size: 60px;
+		margin: 20px 10px;
+		text-align: right;
+		overflow-x: auto;
+		white-space: nowrap;
+	}
+}
+
+@media screen and (max-width: 405px) {
+	.display {
+		font-size: 70px;
+	}
+	.button {
+		font-size: 23px;
+	}
+	.zero-btn {
+		width: 47%;
+	}
+}
+
+@media screen and (max-width: 369px) {
+	.display {
+		font-size: 70px;
+	}
+	.button {
+		font-size: 21px;
+	}
+	.zero-btn {
+		width: 47%;
+	}
+}
